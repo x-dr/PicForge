@@ -2,6 +2,7 @@ import { useAssets } from '../../app/AssetContext';
 import { useFileImport } from '../../app/FileImportContext';
 import { EmptyArtwork } from '../../app/EmptyArtwork';
 import { Icon } from '../../app/Icon';
+import { PreviewImage } from '../../app/PreviewImage';
 import { transformPlan } from '../../imaging/transform';
 import { useProcessing } from './ProcessingContext';
 import { useProcessingPreview } from './use-processing-preview';
@@ -52,7 +53,7 @@ export function ProcessingPreview({ mode }: { mode: ProcessingMode }) {
           <>
             <div className={styles.previewImage}>
               {preview.url ? (
-                <img
+                <PreviewImage
                   className="checkerboard"
                   src={preview.url}
                   data-testid="processing-preview"

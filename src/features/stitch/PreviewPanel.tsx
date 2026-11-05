@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { EmptyArtwork } from '../../app/EmptyArtwork';
 import { Icon } from '../../app/Icon';
+import { PreviewImage } from '../../app/PreviewImage';
 import { useEditor } from './EditorContext';
 import { useFileImport } from '../../app/FileImportContext';
 import { usePreview } from './use-preview';
@@ -83,7 +84,7 @@ export function PreviewPanel() {
                     flexShrink: 0,
                   }}
                 >
-                  <img
+                  <PreviewImage
                     data-testid="stitch-preview"
                     src={preview.url}
                     alt={`${ready.length} 张图片的拼接预览，输出 ${plan.width} × ${plan.height} 像素`}

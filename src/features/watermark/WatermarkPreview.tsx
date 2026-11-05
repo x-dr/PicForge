@@ -1,4 +1,5 @@
 import { Icon } from '../../app/Icon';
+import { PreviewImage } from '../../app/PreviewImage';
 import { EmptyArtwork } from '../../app/EmptyArtwork';
 import { useAssets } from '../../app/AssetContext';
 import { useFileImport } from '../../app/FileImportContext';
@@ -43,7 +44,7 @@ export function WatermarkPreview() {
           <>
             <div className={styles.watermarkCanvas}>
               {preview.url && (
-                <img
+                <PreviewImage
                   className="checkerboard"
                   data-testid="watermark-preview"
                   src={preview.url}

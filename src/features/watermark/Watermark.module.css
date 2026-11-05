@@ -107,8 +107,14 @@
   align-items: center;
   justify-content: center;
 }
-.watermarkCanvas > img {
+.watermarkCanvas > button {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  place-items: center;
+}
+.watermarkCanvas > button > img {
   display: block;
+  min-height: 0;
   max-width: 100%;
   max-height: 100%;
   width: auto;

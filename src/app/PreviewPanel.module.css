@@ -213,7 +213,10 @@
     0 5px 25px #262c4b17,
     0 0 0 1px #d9dce44d;
 }
-.canvasFrame > img {
+.canvasFrame > button {
+  width: 100%;
+}
+.canvasFrame > button > img {
   display: block;
   width: 100%;
   height: auto;
