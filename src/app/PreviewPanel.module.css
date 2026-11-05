@@ -1,0 +1,330 @@
+.preview {
+  composes: surface from './Panel.module.css';
+}
+.preview {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fbfcfe;
+}
+.previewToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 0 19px;
+  min-height: 54px;
+  border-bottom: 1px solid var(--line);
+  gap: 12px;
+}
+.previewTitle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: #62687f;
+  white-space: nowrap;
+}
+.previewTitle :global(.status-dot) {
+  width: 5px;
+  height: 5px;
+  background: #8981ce;
+}
+.previewSubtitle {
+  margin-left: 4px;
+  color: var(--muted);
+  font-size: 9px;
+}
+.zoomControls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.zoomControls select {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 10px;
+  padding: 3px 0 3px 4px;
+  width: 79px;
+}
+.previewViewport {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(#e0e3ec 1px, transparent 1px);
+  background-size: 18px 18px;
+  background-position: center;
+}
+.emptyPreview {
+  margin: auto;
+  padding: 22px 20px 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.smallEyebrow {
+  font-size: 7px;
+  letter-spacing: 2.3px;
+  color: var(--muted);
+  margin-bottom: 19px;
+}
+.emptyPreview h2 {
+  font-size: 25px;
+  letter-spacing: -0.5px;
+  color: #40445c;
+  font-weight: 600;
+  margin: 13px 0 8px;
+}
+.emptyPreview p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0 0 23px;
+}
+.dropHint {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.demoLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 32px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.demoLink button {
+  font-size: 10px;
+  gap: 4px;
+}
+.artwork {
+  width: 249px;
+  height: 170px;
+  position: relative;
+  margin: 0 auto;
+}
+.backCard {
+  position: absolute;
+  width: 135px;
+  height: 151px;
+  background: white;
+  border: 1px solid #eeedf5;
+  box-shadow: 0 8px 20px #7c73910d;
+  transform: rotate(-13deg);
+  left: 19px;
+  top: 3px;
+  border-radius: 8px;
+  padding: 9px;
+}
+.backCard > span:first-child {
+  display: block;
+  height: 90px;
+  border-radius: 3px;
+  background: linear-gradient(150deg, #e4def2, #c7c0df);
+}
+.backCard > span:last-child {
+  display: block;
+  margin-top: 11px;
+  width: 61%;
+  height: 5px;
+  border-radius: 2px;
+  background: #eeedf5;
+}
+.frontCard {
+  position: absolute;
+  width: 190px;
+  height: 154px;
+  left: 56px;
+  top: 15px;
+  background: white;
+  transform: rotate(8deg);
+  border-radius: 8px;
+  border: 1px solid #e8e6ee;
+  box-shadow: 0 12px 25px #81799312;
+  padding: 9px;
+}
+.frontCard > svg {
+  display: block;
+  width: 170px;
+  height: 111px;
+  border-radius: 4px;
+}
+.frontCard > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 3px 0;
+}
+.frontCard > div span {
+  width: 53px;
+  height: 4px;
+  border-radius: 2px;
+  background: #eeedf3;
+}
+.frontCard > div span:last-child {
+  width: 18px;
+}
+.artworkPlus {
+  position: absolute;
+  left: 4px;
+  top: 112px;
+  color: var(--accent);
+  background: white;
+  border: 1px solid #eeebf9;
+  border-radius: 11px;
+  box-shadow: 0 4px 15px #5142970c;
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  transform: rotate(-8deg);
+}
+.artworkDot {
+  position: absolute;
+  right: -4px;
+  top: 1px;
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background: #ded8f7;
+  transform: rotate(22deg);
+}
+.withImage {
+  padding: 25px 25px 14px;
+}
+.previewImageArea {
+  min-height: 0;
+  flex: 1;
+  display: flex;
+  align-items: safe center;
+  justify-content: safe center;
+  position: relative;
+}
+.canvasFrame {
+  line-height: 0;
+  box-shadow:
+    0 5px 25px #262c4b17,
+    0 0 0 1px #d9dce44d;
+}
+.canvasFrame > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.previewNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 10px;
+  padding-top: 20px;
+  white-space: nowrap;
+}
+.previewLoading {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #ffffffed;
+  box-shadow: 0 3px 12px #2527490d;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  color: var(--muted);
+  font-size: 10px;
+  white-space: nowrap;
+}
+.previewFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 0 16px;
+  min-height: 36px;
+  border-top: 1px solid var(--line);
+  font-size: 9px;
+  color: var(--muted);
+  gap: 10px;
+}
+.previewFooter > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .previewToolbar {
+    padding: 0 12px;
+  }
+  .previewSubtitle {
+    display: none;
+  }
+  .previewFooter {
+    padding: 0 10px;
+    gap: 5px;
+    font-size: 8px;
+  }
+  .smallEyebrow {
+    letter-spacing: 1.3px;
+    font-size: 6px;
+  }
+  .emptyPreview h2 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 767px) {
+  .preview {
+    min-height: 510px;
+    height: 550px;
+    width: 100%;
+  }
+  .previewToolbar {
+    min-height: 46px;
+    padding: 0 12px;
+  }
+  .previewTitle {
+    font-size: 11px;
+  }
+  .previewSubtitle {
+    display: none;
+  }
+  .zoomControls select {
+    font-size: 11px;
+  }
+  .smallEyebrow {
+    font-size: 6px;
+    letter-spacing: 1.4px;
+  }
+  .emptyPreview {
+    padding: 18px 12px 25px;
+  }
+  .emptyPreview h2 {
+    font-size: 23px;
+  }
+  .emptyPreview p {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+  .demoLink {
+    margin-top: 25px;
+    font-size: 10px;
+  }
+  .previewFooter {
+    padding: 0 10px;
+    font-size: 8px;
+  }
+  .withImage {
+    padding: 18px 14px 12px;
+  }
+}

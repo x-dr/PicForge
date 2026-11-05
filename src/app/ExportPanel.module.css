@@ -1,0 +1,140 @@
+.exportPanel {
+  composes: surface from './Panel.module.css';
+}
+.exportPanel {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 17px 19px;
+  align-self: start;
+}
+.exportInfo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+.exportIcon {
+  width: 37px;
+  height: 40px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: #f6f5fd;
+  color: var(--muted);
+}
+.exportInfo > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.exportInfo strong {
+  font-weight: 500;
+  font-size: 12px;
+  color: #60667e;
+  letter-spacing: 0.1px;
+}
+.exportInfo div > span {
+  font-size: 9px;
+  color: var(--muted);
+}
+.exportAction {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.exportAction > button {
+  min-width: 125px;
+}
+.exportAction :global(.export-button) > span {
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.exportPhase {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent);
+  font-size: 11px;
+}
+.exportMessages {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.exportMessages :global(.microcopy) {
+  margin: 0;
+  font-size: 10px;
+}
+@media (max-width: 767px) {
+  .exportPanel {
+    align-self: stretch;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .exportPanel {
+    padding: 14px;
+  }
+  .exportIcon {
+    display: none;
+  }
+  .exportAction > button {
+    min-width: 105px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .exportPanel {
+    position: sticky;
+    bottom: 8px;
+    margin-top: 1px;
+    z-index: 20;
+    box-shadow: 0 -4px 20px #28224e08;
+    padding: 13px 14px calc(13px + env(safe-area-inset-bottom));
+    gap: 8px;
+    background: #fffffffa;
+  }
+  .exportInfo {
+    gap: 0;
+  }
+  .exportIcon {
+    display: none;
+  }
+  .exportInfo strong {
+    font-size: 11px;
+  }
+  .exportInfo div > span {
+    font-size: 8px;
+  }
+  .exportAction > button {
+    min-width: 113px;
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+  .exportPhase {
+    font-size: 9px;
+    gap: 5px;
+  }
+  .exportAction {
+    gap: 5px;
+  }
+  .exportAction .exportPhase + button {
+    min-width: 54px;
+  }
+  .exportMessages :global(.microcopy) {
+    font-size: 9px;
+  }
+  .exportMessages :global(.message) {
+    font-size: 10px;
+    padding: 7px 9px;
+  }
+}

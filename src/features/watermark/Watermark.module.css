@@ -1,0 +1,225 @@
+.settingsBody {
+  font-size: 12px;
+}
+.contentField {
+  margin-top: 14px;
+}
+.textInput {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 7px;
+  height: 38px;
+  padding: 7px 10px;
+  color: var(--text);
+  background: white;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 11px;
+  margin-bottom: 14px;
+}
+.checkbox input {
+  accent-color: var(--accent);
+}
+.checkbox > span {
+  color: var(--muted);
+  font-size: 9px;
+  margin-left: auto;
+}
+.positions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-bottom: 18px;
+  background: #f9f9fd;
+}
+.positions button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--muted);
+  height: 30px;
+  font-size: 17px;
+}
+.positions .selected {
+  background: #edeafb;
+  border-color: #bcb3ed;
+  color: var(--accent);
+}
+.logoArea {
+  margin-top: 14px;
+}
+.logoArea > button {
+  width: 100%;
+  font-size: 11px;
+}
+.logoPreview {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+  min-width: 0;
+}
+.logoPreview > span:first-child {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+.logoPreview img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.logoPreview > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 11px;
+  color: var(--muted);
+}
+.imageSelect {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  color: var(--muted);
+  font-size: 11px;
+  padding: 5px 7px;
+  max-width: 65%;
+  min-width: 0;
+}
+.watermarkCanvas {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.watermarkCanvas > img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 5px 25px #262c4b17;
+}
+.results {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+  align-self: start;
+}
+.batchToolbar {
+  position: static;
+  margin: 0;
+}
+.batchStatus {
+  flex-basis: 100%;
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0;
+}
+.resultBody {
+  padding: 15px 18px;
+  background: white;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  margin-top: 12px;
+}
+.resultHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.resultHeading h2 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+.resultHeading h2 > span {
+  font-size: 10px;
+  color: var(--muted);
+  margin-left: 6px;
+}
+.resultList {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+.resultList > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+.resultList button {
+  flex-shrink: 0;
+  font-size: 11px;
+  min-height: 34px;
+  padding: 5px 10px;
+}
+.resultInfo {
+  flex: 1;
+  min-width: 0;
+}
+.resultInfo > strong {
+  font-size: 11px;
+  font-weight: 500;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.resultInfo > span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: 4px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .settingsBody {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .settingsBody fieldset + fieldset > legend {
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .results {
+    width: 100%;
+  }
+  .batchToolbar {
+    position: sticky;
+    bottom: 8px;
+  }
+  .resultBody {
+    padding: 14px;
+  }
+  .positions button {
+    min-height: 40px;
+  }
+  .textInput,
+  .imageSelect {
+    font-size: 16px;
+  }
+  .imageSelect {
+    max-width: 63%;
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-05",
+  "scope": "V1.1 local source and production static build; V1.0 container archive unchanged",
+  "checks": {
+    "vitest": {
+      "files": 5,
+      "passed": 22
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "format": "passed",
+    "build": "passed"
+  },
+  "browserTests": {
+    "chromium": {
+      "passed": 34,
+      "skipped": 0
+    },
+    "firefox": {
+      "passed": 33,
+      "skipped": 1
+    },
+    "webkit": {
+      "passed": 33,
+      "skipped": 1
+    },
+    "total": {
+      "passed": 100,
+      "skipped": 2,
+      "failed": 0
+    },
+    "newWatermarkCases": 39,
+    "lastRun": {
+      "status": "passed",
+      "failedTests": []
+    }
+  },
+  "screenshots": [
+    "docs/screenshots/watermark-360.png",
+    "docs/screenshots/watermark-768.png",
+    "docs/screenshots/watermark-1440.png"
+  ],
+  "build": [
+    {
+      "path": "dist/index.html",
+      "bytes": 750,
+      "sha256": "743a943f37af5b6de5a2c8e1a4699656e68ddf39a78f09ffa19d6106aba8c682"
+    },
+    {
+      "path": "dist/assets/index-BzLMl7_G.css",
+      "bytes": 28673,
+      "sha256": "4acefd330eec7db519f557a975c1da7d53be803520950e3187dbd8a17092b7b4"
+    },
+    {
+      "path": "dist/assets/index-MDQz2lTC.js",
+      "bytes": 289019,
+      "sha256": "b9bb409cb7f435119720c2ae983572ac5febd22b1ef5d3546f414133c0ba8e58"
+    },
+    {
+      "path": "dist/assets/render.worker-5xxFZ_th.js",
+      "bytes": 5247,
+      "sha256": "c9e57ac838bbeb89aab36033010e1563af6f3ac1611e6a28c762363454083acd"
+    }
+  ],
+  "verificationLimits": [
+    "Headless browsers only; no physical mobile device",
+    "No Docker rebuild or public deployment",
+    "Generated samples; not photographic workload or browser memory peak measurement",
+    "64/32 MiB Blob retention protection implemented; not a browser heap limit"
+  ]
+}

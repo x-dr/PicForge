@@ -1,0 +1,135 @@
+.settings {
+  composes: surface from './Panel.module.css';
+}
+.settings {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+.settingsBody {
+  padding: 20px 20px 22px;
+}
+.settingsBody fieldset + fieldset > legend {
+  width: 100%;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.modeChoices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.modeButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 73px;
+  border-radius: 8px;
+  border: 1px solid var(--line-strong);
+  background: white;
+  color: var(--muted);
+  font-size: 11px;
+}
+.modeButton:hover {
+  border-color: #b7afef;
+}
+.modeButton.selected {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #f7f5ff;
+  box-shadow: 0 0 0 1px #6658da0b;
+}
+.swatches {
+  display: flex;
+  gap: 11px;
+  margin: 3px 0 15px;
+}
+.swatch {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e2e4eb;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+.activeSwatch {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  color: var(--accent);
+}
+.colorInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+.colorInput input {
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.colorInput span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.colorInput span:last-child {
+  margin-left: auto;
+  font-size: 9px;
+  color: var(--muted);
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .settings {
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+  .settingsBody {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .settingsBody > fieldset {
+    margin: 0;
+  }
+  .settingsBody fieldset + fieldset {
+    padding-top: 0;
+    border-top: 0;
+  }
+  .settingsBody fieldset + fieldset > legend {
+    padding-top: 0;
+    border-top: 0;
+  }
+  .settingsBody fieldset:nth-of-type(4) {
+    grid-column: 1 / 3;
+  }
+  .settingsBody :global(.reset-button) {
+    align-self: end;
+    margin: 0 0 15px;
+  }
+  .swatches {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .swatch {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .settings {
+    width: 100%;
+  }
+  .settingsBody {
+    padding: 18px;
+  }
+  .modeButton {
+    height: 76px;
+    font-size: 12px;
+  }
+}

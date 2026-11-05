@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-05",
+  "versions": {
+    "chromium": "156.0.8078.4",
+    "firefox": "157.0",
+    "webkit": "27.2"
+  },
+  "metadata": {
+    "PNG": {
+      "bytes": 68016,
+      "originalExifNotCopied": true
+    },
+    "JPEG": {
+      "bytes": 18727,
+      "originalExifNotCopied": true
+    }
+  },
+  "http": {
+    "html": 200,
+    "htmlCache": "no-cache",
+    "asset": 200,
+    "assetImmutable": true,
+    "missing": 404,
+    "csp": true
+  },
+  "scope": "Local container only; EXIF check covers generated orientation metadata, not a universal metadata anonymization guarantee"
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-05",
+  "os": "Linux 7.0.14-19-pve x64",
+  "cpu": "Intel(R) Core(TM) i5-8500 CPU @ 3.00GHz",
+  "logicalCpus": 6,
+  "totalMemoryGiB": 8,
+  "browser": "156.0.8078.4",
+  "mode": "production, headless, concurrent test runner; preview measured from input event to decoded image and next animation frame; export includes Playwright IPC",
+  "samples": "10 generated solid-color PNG images, each 1920 × 1080; not a photographic workload",
+  "previewMs": [145, 152, 138, 129, 140, 144, 129, 124, 121, 145],
+  "p95Ms": 152,
+  "exportSize": "1132 × 6366",
+  "exportMs": {
+    "PNG": [518, 663, 686],
+    "JPEG": [619, 631, 701]
+  }
+}

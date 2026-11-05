@@ -1,0 +1,307 @@
+{
+  "date": "2026-11-05",
+  "version": "2.0.0",
+  "scope": "V1.2, V1.3, V2.0 local source and production static build; full V1.0/V1.1 regression; no Docker rebuild or deployment",
+  "checks": {
+    "vitest": {
+      "files": 12,
+      "passed": 36
+    },
+    "typecheck": "passed via pnpm build",
+    "lint": "passed",
+    "format": "passed",
+    "build": "passed",
+    "composeConfig": "passed"
+  },
+  "browserTests": {
+    "chromium": {
+      "passed": 45
+    },
+    "firefox": {
+      "passed": 44,
+      "skipped": 1
+    },
+    "webkit": {
+      "passed": 44,
+      "skipped": 1
+    },
+    "total": {
+      "passed": 133,
+      "skipped": 2,
+      "failed": 0
+    },
+    "newCases": 33,
+    "stats": {
+      "startTime": "2026-11-05T10:52:48.855Z",
+      "duration": 131129.25699999998,
+      "expected": 133,
+      "skipped": 2,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "skippedReason": "Fixed desktop performance measurement runs on Chromium only."
+  },
+  "conversionProof": {
+    "chromium": {
+      "browser": "156.0.8078.4",
+      "image/png": {
+        "bytes": 113,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[0, 0, 0, 0]],
+          "signature": [137, 80, 78, 71, 13, 10, 26, 10],
+          "greenPixels": 0
+        }
+      },
+      "image/jpeg": {
+        "bytes": 764,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[255, 255, 255, 255]],
+          "signature": [255, 216, 255, 224, 0, 16, 74, 70],
+          "greenPixels": 0
+        }
+      },
+      "image/webp": {
+        "bytes": 564,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[0, 0, 0, 0]],
+          "signature": [82, 73, 70, 70, 44, 2, 0, 0],
+          "greenPixels": 0
+        }
+      },
+      "image/avif": {
+        "bytes": 495,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[0, 0, 0, 0]],
+          "signature": [0, 0, 0, 32, 102, 116, 121, 112],
+          "greenPixels": 0
+        }
+      }
+    },
+    "firefox": {
+      "browser": "157.0",
+      "image/png": {
+        "bytes": 124,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[0, 0, 0, 0]],
+          "signature": [137, 80, 78, 71, 13, 10, 26, 10],
+          "greenPixels": 0
+        }
+      },
+      "image/jpeg": {
+        "bytes": 643,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[255, 255, 255, 255]],
+          "signature": [255, 216, 255, 224, 0, 16, 74, 70],
+          "greenPixels": 0
+        }
+      },
+      "image/webp": {
+        "bytes": 94,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[0, 0, 0, 0]],
+          "signature": [82, 73, 70, 70, 86, 0, 0, 0],
+          "greenPixels": 0
+        }
+      },
+      "image/avif": {
+        "bytes": 495,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[0, 0, 0, 0]],
+          "signature": [0, 0, 0, 32, 102, 116, 121, 112],
+          "greenPixels": 0
+        }
+      }
+    },
+    "webkit": {
+      "browser": "27.2",
+      "image/png": {
+        "bytes": 110,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[0, 0, 0, 0]],
+          "signature": [137, 80, 78, 71, 13, 10, 26, 10],
+          "greenPixels": 0
+        }
+      },
+      "image/jpeg": {
+        "bytes": 764,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[255, 255, 255, 255]],
+          "signature": [255, 216, 255, 224, 0, 16, 74, 70],
+          "greenPixels": 0
+        }
+      },
+      "image/webp": {
+        "bytes": 564,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[0, 0, 0, 0]],
+          "signature": [82, 73, 70, 70, 44, 2, 0, 0],
+          "greenPixels": 0
+        }
+      },
+      "image/avif": {
+        "bytes": 495,
+        "image": {
+          "width": 32,
+          "height": 20,
+          "pixels": [[0, 0, 0, 0]],
+          "signature": [0, 0, 0, 32, 102, 116, 121, 112],
+          "greenPixels": 0
+        }
+      }
+    }
+  },
+  "subpathProof": "docs/records/subpath-2026-11-05.json",
+  "build": [
+    {
+      "path": "dist/assets/avif_enc-Co4TcJko.wasm",
+      "bytes": 3485872,
+      "sha256": "d9f2a95164362af48558d176e619becfd49dd97b50b86c679b47100860522b3d"
+    },
+    {
+      "path": "dist/assets/codec-fallback-DRUzaXfH.js",
+      "bytes": 488,
+      "sha256": "bd16de030483af66d37ceb5852f938b0060026975abe3d3f162b2403f14ab213"
+    },
+    {
+      "path": "dist/assets/codec-fallback-DbSEVSOP.js",
+      "bytes": 688,
+      "sha256": "02415576e95bac00f723c3ddc273042b5ce89002ca81a115abf2e1bb4e4f5274"
+    },
+    {
+      "path": "dist/assets/encode-avif-BVjLZkZg.js",
+      "bytes": 19644,
+      "sha256": "fceddf000ee909e12764162714de449b3dbb456b14870652f22983ac2ae4ae80"
+    },
+    {
+      "path": "dist/assets/encode-avif-i34TOR0j.js",
+      "bytes": 19644,
+      "sha256": "7ac1077770b2f64ddba74c41e31d233f9a5a94b62256c1ed5d6269697a53169a"
+    },
+    {
+      "path": "dist/assets/encode-webp-Dd8KyDjm.js",
+      "bytes": 20977,
+      "sha256": "09d175f74e4157c52f4b206a4a9dddb24b33bc8d42fb00bd4cf67461694cd50d"
+    },
+    {
+      "path": "dist/assets/encode-webp-y4Ym23X5.js",
+      "bytes": 20977,
+      "sha256": "003bbde466437a19e782c66f8c45650316c6be4dfbe87072fe25fc0c4174441f"
+    },
+    {
+      "path": "dist/assets/index-C6shcvzB.css",
+      "bytes": 31432,
+      "sha256": "abef147312374c30fc3e84e665c7dfc3e64a84301daedbe91a65516f9e0bc991"
+    },
+    {
+      "path": "dist/assets/index-Ci-tfqdp.js",
+      "bytes": 326896,
+      "sha256": "a100b53f1f03eb1cec0d9ed80f5380d653de454efc5089f2703d90ec2c9ab3b4"
+    },
+    {
+      "path": "dist/assets/render.worker-Dt3_aXe-.js",
+      "bytes": 5825,
+      "sha256": "66dbd57cc943e9a1b73542f7f9285560858bea3b536da42408bf2961372f50bb"
+    },
+    {
+      "path": "dist/assets/webp_enc-BpZvKflB.wasm",
+      "bytes": 281261,
+      "sha256": "b6085bb6702f144e9dc6016d58d230b34a84976bf0d080b7390b4b4b137d6ab7"
+    },
+    {
+      "path": "dist/assets/zip-DtJ3Cgeu.js",
+      "bytes": 2293,
+      "sha256": "69782b1fce61649fd28563e89941c3531ff26346cab1986dd746ec13dde252b9"
+    },
+    {
+      "path": "dist/favicon.svg",
+      "bytes": 287,
+      "sha256": "ae23f047c67435cc8e2d471dbfb0f780a5683c4a6724ee491cd1d04c7908b91b"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 745,
+      "sha256": "55313223c04eec08276da60239e6e7af68dde98467f791d30ce1e5f751f56a5f"
+    },
+    {
+      "path": "dist/third-party-licenses.txt",
+      "bytes": 13287,
+      "sha256": "718a39c1d051a9d038fa24179d2083eebe2c81e58773d04393626960a76a6f90"
+    }
+  ],
+  "protection": {
+    "perToolResultMiB": {
+      "desktop": 32,
+      "coarsePointer": 16
+    },
+    "sharedResultsMiB": {
+      "desktop": 64,
+      "coarsePointer": 32
+    },
+    "avifOutputPixels": {
+      "desktop": 4000000,
+      "coarsePointer": 1500000
+    },
+    "avifReserveMiB": {
+      "desktop": 96,
+      "coarsePointer": 64
+    },
+    "zip": "Stored ZIP32, streams CRC, guarded aggregate size, cancellable"
+  },
+  "screenshots": [
+    "docs/screenshots/batch-1440.png",
+    "docs/screenshots/batch-360.png",
+    "docs/screenshots/batch-768.png",
+    "docs/screenshots/convert-1440.png",
+    "docs/screenshots/convert-360.png",
+    "docs/screenshots/convert-768.png",
+    "docs/screenshots/transform-1440.png",
+    "docs/screenshots/transform-360.png",
+    "docs/screenshots/transform-768.png"
+  ],
+  "verificationLimits": [
+    "Headless desktop engines and simulated viewports only; no physical iOS/Android devices",
+    "Generated image samples; no photographic workload or process-wide memory-peak measurements",
+    "Static build and local CSP/subpath tests; no Docker runtime rebuild or public deployment",
+    "AVIF input accepts static direct AV1 primary items only; animation, grids and transformed/cropped container properties rejected",
+    "Results and geometry previews are memory limited; no persistent image drafts, professional color pipeline or infinite batches"
+  ],
+  "stitchPerformanceRegression": {
+    "date": "2026-11-05",
+    "os": "Linux 7.0.14-19-pve x64",
+    "cpu": "Intel(R) Core(TM) i5-8500 CPU @ 3.00GHz",
+    "logicalCpus": 6,
+    "totalMemoryGiB": 8,
+    "browser": "156.0.8078.4",
+    "mode": "production, headless, concurrent test runner; preview measured from input event to decoded image and next animation frame; export includes Playwright IPC",
+    "samples": "10 generated solid-color PNG images, each 1920 × 1080; not a photographic workload",
+    "previewMs": [151, 142, 163, 139, 139, 142, 131, 133, 124, 125],
+    "p95Ms": 163,
+    "exportSize": "1132 × 6366",
+    "exportMs": {
+      "PNG": [600, 598, 793],
+      "JPEG": [729, 732, 628]
+    }
+  }
+}

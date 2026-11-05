@@ -1,0 +1,288 @@
+.assets {
+  composes: surface from './Panel.module.css';
+}
+.assets {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 127px;
+}
+.assets:not([open]) {
+  padding-bottom: 0;
+  align-self: start;
+}
+.assetBody {
+  padding: 18px 15px 0;
+}
+.assetBody > button {
+  width: 100%;
+}
+.assetBody > :global(.microcopy) {
+  margin-top: 9px;
+  font-size: 9px;
+  letter-spacing: -0.1px;
+}
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 23px 1px 12px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.listHeader button {
+  font-size: 10px;
+}
+.assetList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  max-height: min(52vh, 570px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.assetItem {
+  padding: 9px 8px 6px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+.assetItem:hover {
+  border-color: #d9d4f3;
+}
+.dragging {
+  opacity: 0.5;
+  border-color: var(--accent);
+}
+.assetTop {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+.grip {
+  padding: 0;
+  min-width: 12px;
+  width: 12px;
+  color: var(--muted);
+  cursor: grab;
+  touch-action: none;
+}
+.thumbnail {
+  width: 45px;
+  height: 45px;
+  background: #f0f1f6;
+  border-radius: 5px;
+  flex-shrink: 0;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.thumbnail > img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.assetIndex {
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  color: white;
+  background: #262c3b80;
+  font-size: 7px;
+  line-height: 1.5;
+  padding: 0 3px;
+  border-radius: 2px;
+}
+.assetInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 5px;
+  flex: 1;
+}
+.assetInfo strong {
+  font-size: 10px;
+  font-weight: 500;
+  color: #555a70;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.assetInfo > span {
+  font-size: 9px;
+  color: var(--muted);
+}
+.assetTop :global(.remove-button) {
+  min-width: 18px;
+  width: 18px;
+  padding: 1px;
+  color: var(--muted);
+}
+.assetActions {
+  margin-top: 6px;
+  padding-left: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 8px;
+  color: var(--muted);
+}
+.assetActions > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.assetActions :global(.status-dot) {
+  width: 4px;
+  height: 4px;
+}
+.assetActions button {
+  min-width: 22px;
+  min-height: 21px;
+  padding: 2px;
+}
+.emptyList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 38px 0 35px;
+  border: 1px dashed #e5e7ef;
+  border-radius: 8px;
+  background: #fcfcfe;
+}
+.emptyListIcon {
+  color: var(--muted);
+  background: #f2f3f8;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+}
+.emptyList p {
+  margin: 16px 0 5px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.emptyList > span:last-child {
+  font-size: 9px;
+  color: var(--muted);
+}
+.assetTip {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 9px;
+  color: var(--muted);
+  margin: 18px 2px 0;
+  line-height: 1.9;
+}
+.assetTip svg {
+  margin-top: 2px;
+}
+.privacyCard {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 15px 13px;
+  margin: 20px 15px 18px;
+  background: #f7f8fc;
+  border-radius: 8px;
+  color: var(--muted);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.privacyCard > svg {
+  color: var(--muted);
+  margin-top: 2px;
+}
+.privacyCard strong {
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 500;
+}
+.privacyCard p {
+  font-size: 9px;
+  line-height: 1.9;
+  margin: 4px 0 0;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .assets {
+    grid-row: 1 / 3;
+  }
+  .assetBody {
+    padding: 16px 11px 0;
+  }
+  .privacyCard {
+    margin-left: 11px;
+    margin-right: 11px;
+  }
+}
+@media (max-width: 767px) {
+  .assets {
+    padding-bottom: 0;
+    width: 100%;
+  }
+  .assetBody {
+    padding: 14px;
+  }
+  .assetBody > :global(.microcopy) {
+    font-size: 10px;
+  }
+  .privacyCard {
+    display: none;
+  }
+  .assetList {
+    max-height: 320px;
+  }
+  .assetItem {
+    padding: 10px;
+  }
+  .assetTop {
+    gap: 8px;
+  }
+  .thumbnail,
+  .thumbnail img {
+    width: 48px;
+    height: 48px;
+  }
+  .assetInfo strong {
+    font-size: 12px;
+  }
+  .assetInfo > span {
+    font-size: 10px;
+  }
+  .assetActions {
+    font-size: 10px;
+  }
+  .assetActions button {
+    min-width: 30px;
+    min-height: 30px;
+  }
+  .assetTop :global(.remove-button) {
+    min-width: 30px;
+  }
+  .grip {
+    min-width: 24px;
+  }
+  .listHeader {
+    font-size: 11px;
+    margin: 15px 0 10px;
+  }
+  .emptyList {
+    padding: 24px 0;
+  }
+  .assetTip {
+    font-size: 10px;
+    margin: 13px 2px 0;
+  }
+}

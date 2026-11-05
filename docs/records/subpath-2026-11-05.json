@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-05",
+  "scope": "Local production dist under /tools/picforge/ with repository Nginx CSP; not a Docker or public deployment test",
+  "results": [
+    {
+      "name": "chromium",
+      "version": "156.0.8078.4",
+      "passed": true,
+      "outputBytes": 332,
+      "resources": [
+        "/tools/picforge/",
+        "/tools/picforge/assets/index-Ci-tfqdp.js",
+        "/tools/picforge/assets/index-C6shcvzB.css",
+        "/tools/picforge/favicon.svg",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/codec-fallback-DbSEVSOP.js",
+        "/tools/picforge/assets/encode-avif-i34TOR0j.js",
+        "/tools/picforge/assets/avif_enc-Co4TcJko.wasm",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/codec-fallback-DRUzaXfH.js",
+        "/tools/picforge/assets/encode-avif-BVjLZkZg.js",
+        "/tools/picforge/assets/avif_enc-Co4TcJko.wasm"
+      ]
+    },
+    {
+      "name": "firefox",
+      "version": "157.0",
+      "passed": true,
+      "outputBytes": 332,
+      "resources": [
+        "/tools/picforge/",
+        "/tools/picforge/assets/index-Ci-tfqdp.js",
+        "/tools/picforge/assets/index-C6shcvzB.css",
+        "/tools/picforge/favicon.svg",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/codec-fallback-DbSEVSOP.js",
+        "/tools/picforge/assets/encode-avif-i34TOR0j.js",
+        "/tools/picforge/assets/avif_enc-Co4TcJko.wasm",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/codec-fallback-DRUzaXfH.js",
+        "/tools/picforge/assets/encode-avif-BVjLZkZg.js",
+        "/tools/picforge/assets/avif_enc-Co4TcJko.wasm"
+      ]
+    },
+    {
+      "name": "webkit",
+      "version": "27.2",
+      "passed": true,
+      "outputBytes": 332,
+      "resources": [
+        "/tools/picforge/",
+        "/tools/picforge/assets/index-Ci-tfqdp.js",
+        "/tools/picforge/assets/index-C6shcvzB.css",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/codec-fallback-DbSEVSOP.js",
+        "/tools/picforge/assets/encode-avif-i34TOR0j.js",
+        "/tools/picforge/assets/avif_enc-Co4TcJko.wasm",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/render.worker-Dt3_aXe-.js",
+        "/tools/picforge/assets/codec-fallback-DRUzaXfH.js",
+        "/tools/picforge/assets/encode-avif-BVjLZkZg.js",
+        "/tools/picforge/assets/avif_enc-Co4TcJko.wasm"
+      ]
+    }
+  ]
+}
